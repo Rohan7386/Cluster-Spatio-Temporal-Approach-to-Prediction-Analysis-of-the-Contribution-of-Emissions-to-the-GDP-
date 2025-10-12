@@ -25,7 +25,9 @@ The remaining columns provide the corresponding emission levels for each year be
 The following progress was made for the week:
 
 •	Principal Component Analysis: The emissions for the years 1990 to 2023 were reduced in dimension in the PCA to optimal components for combined emissions, Fossil CO2 emissions, CH4 emissions, N2O emissions and F-Gases emissions.
+
 •	Cluster Analyses: The K-Means clusters were computed from the optimal components for combined emissions, Fossil CO2 emissions, CH4 emissions, N2O emissions and F-Gases emissions.
+
 •	Data Fusion: The clusters resulting from the respective cluster analyses were combined to the initial dataset to make the final dataset.
 
 The descriptive analysis is presented in the dashboard below:
@@ -35,6 +37,53 @@ The descriptive analysis is presented in the dashboard below:
 Determination of the number of components for the PCA model was particularly a challenge. In comparison, K-Means clustering through the within cluster sum of squares allows for the determination of the optimal number of clusters to be predicted from the K-Means. The PCA model requires the number of components parameter without a way of determining a starting number of components. Although the scree plot is applied later on to get the optimal number of components, the number of components to begin with is the challenge. 
 
 
+## Week 4
+
+The following progress was made for the week:
+
+•	Data Merging: Merging of the emissions and GDP data using Year and State was completed. This reduced the timeframe of the data to cover the period between 2005 to 2023 since the GDP data had a time frame of between 2005 and 2023 while the emissions data covered the period between 1990 and 2023.
+
+•	Geospatial Analysis: Geospatial analysis of the GDP, and the clusters for the Combined Emissions, Fossil CO2 emissions, CH4 emissions, N2O emissions and F-Gases emissions completed in Tableau.
+
+•	Contextual Interpretation: Interpretation of the geospatial analysis of the emissions relative to the interpretation of the geospatial analysis of the GDP. 
+
+The Geospatial Analysis is presented in the dashboard below:
+
+![Geospatial Analysis](https://github.com/Rohan7386/Cluster-Spatio-Temporal-Approach-to-Prediction-Analysis-of-the-Contribution-of-Emissions-to-the-GDP-/blob/main/Geospatial%20Analysis.png)
+
+The bulkiness of the geospatial analyses represent an area of discussion. Geospatial analysis was completed for the GDP, and the clusters for the Combined Emission, Fossil CO2 emissions, CH4 emissions, N2O emissions and F-Gases emissions. However, the mapping involved for each of the years between 2005 and 2023 so as to be able to observe how the evolution took place overtime. The slider in Tableau however allowed for the same map for each of the analyses to be used for observation over time. Pairs of mappings were utilized for the analyses, resulting in the five plotting sheets in Tableau. These pairs were: the GDP - Combined Emission, GDP - Fossil CO2 emissions, GDP - CH4 emissions, GDP - N2O emissions and GDP - F Gases emissions. By having the GDP and emissions mapping side by side, it becomes easier to have contextualized interpretation with the evolution of the GDP observed along with the evolution of each of the emissions.
+
+
+## Week 5
+
+The following progress was made for the week:
+
+•	Data Preparation for Modelling: Three cluster variables created from cluster analysis stage required conversion to dummy variables for use in the training of the models. Using the One-hot Encoding approach, the three cluster variables were converted into dummy variables with each of the constituent clusters converted into variables. Following the encoding of the cluster variables, the data then required feature engineering for the lag feature. Across all the features, forming the predictor variables, the lags were generated. Following the creation of the lags, the data then required partitioning into training and testing sets. The merged, encoded and lagged dataset was split into training and testing sets such that the former had 75% of the data with the latter having 25% of the data. Additionally, the data partitioning was such that the data for the features and the target were split so that in both the training and testing partitions we had corresponding target and features subsets. 
+
+•	Random Forest Model: The random forest model was initialized and trained using the training data with the parameters set as default. The model performance was evaluated for both the training set and the testing set. Based on the model performances and using them as the baseline, the random forest model was tuned with hyperparameters adjusted into order to improve on the model performances. 
+
+•	XGBoost Model: The XGBoost model was initialized and trained using the training data using the default parameters. The model performance was evaluated for both the training set and the testing set. Based on the model performances and using them as the baseline, the random forest model was tuned with hyperparameters adjusted into order to improve on the model performances. 
+
+Hyperparameter tuning specifically represented a challenge for both the Random Forest Model and the XGBoost Model. In both instances multiple changes were required for each of the hyperparameters to ensure that the best combination of the hyperparameters is obtained for yielding the best model performance. 
+
+
+## Week 6
+
+The following progress was made for the week:
+
+•	Light GBM Model: The LightGBM was initialized and trained using the training data with the parameters set as default. The model performance was evaluated for both the training set and the testing set. Based on the model performances and using them as the baseline, the random forest model was tuned with hyperparameters adjusted in order to improve on the model performances. 
+
+•	Performance Comparison: The performance of the Random Forest, XGBoost and LightGBM models were compared based on the performance metrics for the testing set. The following four performance metrics were compared for the three models; R2, Root Mean Square Error (RMSE), Mean Absolute Error (MAE) and Mean Absolute Percentage Error (MAPE).
+
+•	Performance Evaluation Visualization: 
+o	For each of the three models, the four performance metrics were plotted for the default parameters model and the tuned hyperparameters model. Additionally, for each of the default parameters model and the tuned hyperparameters model pairs, both the performance metrics for the training set and the test set were plotted. The bar charts were used for the plotting of the performance metrics.
+o	The performance metrics for the each of the three models for the testing set were then plotted for comparison for the four performance metrics. The bar chart was used for visualization of the comparison between the testing set performance metrics across the three models.
+o	Tabular visualization was also generated together with the bar charts above with information that corresponds with the information on the bar charts, to allow for comparison of the values of the performance metrics. 
+
+
+The dashboard below compares the performance for the three models.
+
+![Predictive Modelling](https://github.com/Rohan7386/Cluster-Spatio-Temporal-Approach-to-Prediction-Analysis-of-the-Contribution-of-Emissions-to-the-GDP-/blob/main/Predictive%20Modelling.png)
 
 
 
