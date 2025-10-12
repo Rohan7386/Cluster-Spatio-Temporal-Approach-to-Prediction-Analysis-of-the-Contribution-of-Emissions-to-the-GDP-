@@ -76,8 +76,11 @@ The following progress was made for the week:
 •	Performance Comparison: The performance of the Random Forest, XGBoost and LightGBM models were compared based on the performance metrics for the testing set. The following four performance metrics were compared for the three models; R2, Root Mean Square Error (RMSE), Mean Absolute Error (MAE) and Mean Absolute Percentage Error (MAPE).
 
 •	Performance Evaluation Visualization: 
+
 o	For each of the three models, the four performance metrics were plotted for the default parameters model and the tuned hyperparameters model. Additionally, for each of the default parameters model and the tuned hyperparameters model pairs, both the performance metrics for the training set and the test set were plotted. The bar charts were used for the plotting of the performance metrics.
+
 o	The performance metrics for the each of the three models for the testing set were then plotted for comparison for the four performance metrics. The bar chart was used for visualization of the comparison between the testing set performance metrics across the three models.
+
 o	Tabular visualization was also generated together with the bar charts above with information that corresponds with the information on the bar charts, to allow for comparison of the values of the performance metrics. 
 
 
