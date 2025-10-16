@@ -8,6 +8,8 @@ As a preliminary step, the project will first aim at grouping the states dependi
 Machine learning algorithms for prediction analysis for the GDP of the states will then be developed, with the extent of emissions and the type of emissions as predictors in a time series framework. 
 Through the algorithms, the economic dependence of the states on emission will be investigated for the present and future cases. 
 
+![Descriptive Analysis](https://github.com/Rohan7386/Cluster-Spatio-Temporal-Approach-to-Prediction-Analysis-of-the-Contribution-of-Emissions-to-the-GDP-/blob/main/Economics%20of%20Emission-2025-10-12-144904.png)
+
 
 ## Week 2
 
