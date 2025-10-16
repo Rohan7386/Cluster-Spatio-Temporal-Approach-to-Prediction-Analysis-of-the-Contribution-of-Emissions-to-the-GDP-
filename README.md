@@ -1,6 +1,9 @@
-# Economics of Emissions: Prediction Analysis of the Contribution of Emissions to the GDP of the states in the United States of America using a Cluster-Spatio-Temporal Approach
+# Project Title
 
-## Project Summary
+Economics of Emissions: Prediction Analysis of the Contribution of Emissions to the GDP of the states in the United States of America using a Cluster-Spatio-Temporal Approach
+
+
+# Project Overview
 
 The project will explore the economics of emissions under the title “Economics of Emissions: Prediction Analysis of the Contribution of Emissions to the GDP of the states in the United States of America using a Cluster-Spatio-Temporal Approach”. 
 A dataset collected from the Federal Reserve Bank of St. Louis (FRED) and four datasets from the Emissions Database for Global Atmospheric Research (EDGAR) will be utilized for the project. 
@@ -8,9 +11,41 @@ As a preliminary step, the project will first aim at grouping the states dependi
 Machine learning algorithms for prediction analysis for the GDP of the states will then be developed, with the extent of emissions and the type of emissions as predictors in a time series framework. 
 Through the algorithms, the economic dependence of the states on emission will be investigated for the present and future cases. 
 
+
+# Workflow Summary
+
+The chart below summarizes the workflow for the project.
+
 ![Descriptive Analysis](https://github.com/Rohan7386/Cluster-Spatio-Temporal-Approach-to-Prediction-Analysis-of-the-Contribution-of-Emissions-to-the-GDP-/blob/main/Economics%20of%20Emission-2025-10-12-144904.png)
 
 
+# Methods
+
+The following methods were employed:
+- Principal Component Analysis
+- KMeans Clustering
+- Predictive Modelling using Time Series Analysis (Random Forest Model, XGBoost Model and Light GBM Model
+
+
+# Results Summary 
+
+Although all the models had very high R2 scores for the training set, the Random Forest model with default parameters had the highest R2 for the training set at 0.9766 indicating that the model explained up to 97.66% of the variation in the GDP. The model also has the lowest MAE at 37460.08 for the test set.
+Although all the models had very high R2 scores for the test set, the tuned XGBoost model had the highest R2 for the testing set at 0.9178 indicating that the model explained up to 91.78% of the variation in the GDP. In addition, the model had the lowest RMSE of 64195.24 for the test set.
+For the model with the highest R2 for the testing set, Tuned XGBoost, the two features with the highest importance were the dummy variables for the F-Gases AR5 clusters. 
+
+# Technology Used 
+
+- Languages Used: Python
+- Additional Softwares: Tableau, Mermaid
+- Data Sources: EDGAR (European Commission, 2024) and FRED (Federal Reserve Bank of St. Louis, 2024)
+
+# References
+
+European Commission. (2024). Emissions Database for Global Atmospheric Research (EDGAR). European Commission, Joint Research Centre.
+Federal Reserve Bank of St. Louis. (2024). Federal Reserve Economic Data (FRED). https://fred.stlouisfed.org/
+
+
+# Project Blog
 ## Week 2
 
 Data collection from FRED was completed through the following link: https://fredaccount.stlouisfed.org/public/datalist/5498/download. 
